@@ -1,7 +1,6 @@
 import { Controller } from '@hotwired/stimulus';
 
 export default class AdminFlashController extends Controller {
-
   static targets = ['close'];
 
   setCookie() {
@@ -23,5 +22,4 @@ export default class AdminFlashController extends Controller {
     const cookieDate = jsDate.toUTCString();
     return cookieDate;
   }
-
 }

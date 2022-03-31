@@ -2,7 +2,7 @@ import { Controller } from '@hotwired/stimulus';
 
 export default class AdminFlashController extends Controller {
 
-  static targets = ['close']
+  static targets = ['close'];
 
   setCookie() {
     const flashData = this.closeTarget;
@@ -13,7 +13,7 @@ export default class AdminFlashController extends Controller {
 
   setAdminFlashCookie(name, value, date) {
     const cookieDate = this.convertToCookieDate(date);
-    document.cookie = `admin_flash_${name}=${value}; expires=${cookieDate}; path=/`
+    document.cookie = `admin_flash_${name}=${value}; expires=${cookieDate}; path=/`;
   }
 
   convertToCookieDate(date) {
@@ -22,5 +22,6 @@ export default class AdminFlashController extends Controller {
     const jsDate = new Date(parts[0], parts[1] - 1, day[0]);
     const cookieDate = jsDate.toUTCString();
     return cookieDate;
-  }     
+  }
+
 }

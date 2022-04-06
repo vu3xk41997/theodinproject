@@ -7,7 +7,7 @@ export default class AdminFlashController extends Controller {
   };
 
   hide() {
-    const expiresAt = new Date(this.expiresAtValue).toUTCString();  
+    const expiresAt = new Date(this.expiresAtValue).toUTCString();
     document.cookie = `admin_flash_${this.idValue}=disabled; expires=${expiresAt}; path=/`;
-  };
-};
+  }
+}
